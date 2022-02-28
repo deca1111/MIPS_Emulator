@@ -1,0 +1,14 @@
+# le registre $16 contient l'adresse de base du tableau
+# *p=0
+# int a = 2
+# p[1] = p[a] = a
+
+
+
+ADDI $16, $0,440 #le tableau p est à @440
+SW $0,0($16)# p[0] = 0
+ADDI $17,$0,4 #a = 2
+SW $17,4($16)#p[1] = a
+SLL $19,$17,2
+ADD $20,$19,$16
+SW $17,0($20) #p[a] = a

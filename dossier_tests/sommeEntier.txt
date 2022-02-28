@@ -1,0 +1,12 @@
+#Somme des entiers de 1 à n, le résultat est dans @456
+
+ADDI $t0 , $0, 25 # n = 5
+ADDI $14, $0, 456
+ADDI $15, $0, 0
+
+ADDI $11, $11, 1
+ADD $15, $15, $11
+SLT $10, $11, $t0
+BGTZ $10, -4
+NOP
+SW $15, 0($14)

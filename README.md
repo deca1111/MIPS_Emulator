@@ -1,2 +1,0 @@
-# MIPS
-Projet émulateur MIPS
